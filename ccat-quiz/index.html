@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCAT Practice Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CCAT Practice Test</h1>
+            <div class="stats">
+                <div class="timer" id="timer">Time: 15:00</div>
+                <div class="progress" id="progress">Question 1 of 50</div>
+                <div class="score" id="score">Score: 0/0</div>
+            </div>
+        </header>
+
+        <div id="start-screen" class="screen">
+            <h2>Welcome to CCAT Practice</h2>
+            <p>This test simulates the Criteria Cognitive Aptitude Test (CCAT)</p>
+            <ul>
+                <li>50 questions in 15 minutes</li>
+                <li>Math, Logic, and Verbal Reasoning</li>
+                <li>Press A, B, C, or D to answer quickly</li>
+                <li>Click answers or use keyboard shortcuts</li>
+            </ul>
+            <button id="start-btn" class="btn-primary">Start Test</button>
+        </div>
+
+        <div id="quiz-screen" class="screen hidden">
+            <div class="question-card">
+                <div class="question-header">
+                    <span class="question-type" id="question-type">Math</span>
+                    <span class="question-number" id="question-number">Question 1</span>
+                </div>
+                <div class="question-text" id="question-text"></div>
+                <div class="options" id="options"></div>
+                <div class="navigation">
+                    <button id="prev-btn" class="btn-secondary" disabled>Previous</button>
+                    <button id="next-btn" class="btn-primary">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="results-screen" class="screen hidden">
+            <h2>Test Complete!</h2>
+            <div class="results-summary">
+                <div class="result-item">
+                    <span class="result-label">Your Score:</span>
+                    <span class="result-value" id="final-score">0/50</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Percentage:</span>
+                    <span class="result-value" id="percentage">0%</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Time Used:</span>
+                    <span class="result-value" id="time-used">0:00</span>
+                </div>
+            </div>
+            <div class="breakdown">
+                <h3>Breakdown by Type:</h3>
+                <div id="breakdown-details"></div>
+            </div>
+            <button id="restart-btn" class="btn-primary">Restart Test</button>
+            <button id="review-btn" class="btn-secondary">Review Answers</button>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
